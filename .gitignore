@@ -40,6 +40,7 @@ nosetests.xml
 .idea
 __pycache__
 *.log
+*.xml
 
 # cmake
 cmake-build-debug
