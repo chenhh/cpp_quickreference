@@ -56,6 +56,13 @@ int main() {
     // v2 = 20; error
     cout << "const reference to v1, v2=" << v2 << endl;
 
+    /*
+     * rvalue reference
+     */
+    int variable = 20;
+    const int&& rref = variable + 10;
+    // rref += 10; error
+    cout<<"rref: "<<rref<<endl;
 
     /*
      * const pointer to a value
