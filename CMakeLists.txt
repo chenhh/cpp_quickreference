@@ -16,6 +16,7 @@ set(SOURCE_FILES
         weak_semaphore.cpp
         string_token.cpp
         cpp11_class.cpp
+        file_io.cpp
         )
 
 add_executable(const_example const_example.cpp)
@@ -23,3 +24,4 @@ add_executable(cpp11_thread cpp11_thread.cpp)
 add_executable(weak_semaphore weak_semaphore.cpp)
 add_executable(string_token  string_token.cpp)
 add_executable(cpp11_class  cpp11_class.cpp)
+add_executable( file_io  file_io.cpp)
