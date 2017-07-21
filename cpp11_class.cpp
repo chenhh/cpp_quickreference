@@ -5,6 +5,8 @@ using namespace std;
 
 class Parent {
 public:
+
+    Parent(){}
     void func1() {
         cout << "func1 parent" << endl;
     }
@@ -16,6 +18,9 @@ public:
     virtual void func3() final{
         cout<<"func3 in parent"<<endl;
     }
+
+    Parent(const Parent&) = delete; //delete copy constructor
+    Parent& operator=(const Parent&) = delete; //delete assigment operator
 };
 
 class Child1 : public Parent {
