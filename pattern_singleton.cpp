@@ -11,7 +11,7 @@ class Singleton {
 
 public:
     static Singleton* getInstance() {
-        if (NULL == m_instance) {
+        if (nullptr == m_instance) {
             m_instance = new Singleton();
         }
         return m_instance;
@@ -27,7 +27,7 @@ private:
     const Singleton& operator=(const Singleton& rhs) = delete;
 
 };
-Singleton* Singleton::m_instance = NULL;
+Singleton* Singleton::m_instance = nullptr;
 
 
 int main() {

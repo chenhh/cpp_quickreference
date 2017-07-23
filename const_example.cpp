@@ -60,9 +60,9 @@ int main() {
      * rvalue reference
      */
     int variable = 20;
-    const int&& rref = variable + 10;
+    const int &&rref = variable + 10;
     // rref += 10; error
-    cout<<"rref: "<<rref<<endl;
+    cout << "rref: " << rref << endl;
 
     /*
      * const pointer to a value

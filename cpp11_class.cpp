@@ -2,13 +2,14 @@
 #include <cstdlib>
 #include <exception>
 #include <stdexcept>
+#include <memory>
 
 using namespace std;
 
 class Parent {
 public:
 
-    Parent() {}
+    Parent() = default;
 
     void func1() {
         cout << "func1 parent" << endl;
@@ -47,7 +48,7 @@ public:
     DynamicArr(const int len)
     try : _len(len) {
         parr = new int(len);
-    } catch (runtime_error &e) {
+    } catch (bad_alloc &e) {
         cerr << e.what() << endl;
         exit(-1);
     }
@@ -76,9 +77,12 @@ private:
 };
 
 int main() {
-    Parent *obj1 = new Parent();
-    Parent *obj2 = new Child1();
-    Child1 *obj3 = new Child1();
+//    Parent *obj1 = new Parent();
+//    Parent *obj2 = new Child1();
+//    Child1 *obj3 = new Child1();
+    shared_ptr<Parent> obj1 (new Parent());
+    shared_ptr<Parent> obj2 (new Child1());
+    auto obj3 =  make_shared<Child1>();
 
     obj1->func1();  // func1 parent
     obj2->func1();  // func1 parent
@@ -86,8 +90,8 @@ int main() {
     obj1->func2();  // func2 in parent
     obj2->func2();  // func2 in child1
 
-    obj1->func3();  // func in parent
-    obj2->func3();  // func in parent
+    obj1->func3();  // func3 in parent
+    obj2->func3();  // func3 in parent
     obj3->func3();  // const func3 in child1
 
 
