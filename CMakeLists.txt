@@ -11,5 +11,12 @@ set(SOURCE_FILES
         .idea/modules.xml
         .idea/vcs.xml
         .idea/workspace.xml
+        main.cpp
         )
+add_executable(main main.cpp)
 
+# gmp
+find_path(GMP_INCLUDE_DIR NAMES gmp.h)
+find_library(GMP_LIBRARY NAMES gmp libgmp)
+find_library(GMPXX_LIBRARIES NAMES gmpxx libgmpxx)
+target_link_libraries(main gmp gmpxx)
