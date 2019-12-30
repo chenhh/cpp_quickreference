@@ -14,14 +14,15 @@ public:
 
 class Grapher {
 public:
-    Grapher(IDrawStrategy* drawStrategy = nullptr) : _drawStrategy(drawStrategy) {}
+    Grapher(IDrawStrategy *drawStrategy = nullptr) : _drawStrategy(drawStrategy) {}
 
 public:
     void drawShape() const;
-    void setShape(IDrawStrategy* drawStrategy);
+
+    void setShape(IDrawStrategy *drawStrategy);
 
 protected:
-    IDrawStrategy* _drawStrategy;
+    IDrawStrategy *_drawStrategy;
 };
 
 // 因為給constrcutor的drawStrategy有相同介面，
@@ -31,7 +32,7 @@ void Grapher::drawShape() const {
         _drawStrategy->draw();
 }
 
-void Grapher::setShape(IDrawStrategy* drawStrategy){
+void Grapher::setShape(IDrawStrategy *drawStrategy) {
     this->_drawStrategy = drawStrategy;
 }
 
@@ -41,8 +42,8 @@ public:
     void draw() const;
 };
 
-void Triangle::draw() const{
-    std::cout<<"draw triangle" << std::endl;
+void Triangle::draw() const {
+    std::cout << "draw triangle" << std::endl;
 }
 
 // 繼承自interface，而非Grapher
@@ -51,8 +52,8 @@ public:
     void draw() const;
 };
 
-void Circle::draw() const{
-    std::cout<<"draw circle" << std::endl;
+void Circle::draw() const {
+    std::cout << "draw circle" << std::endl;
 }
 
 // 繼承自interface，而非Grapher
@@ -61,17 +62,17 @@ public:
     void draw() const;
 };
 
-void Square::draw() const{
-    std::cout<<"draw square" << std::endl;
+void Square::draw() const {
+    std::cout << "draw square" << std::endl;
 }
 
 
 int main() {
-    IDrawStrategy* obj= new Square();
+    IDrawStrategy *obj = new Square();
     Grapher grapher(obj);
     grapher.drawShape();
 
-    IDrawStrategy* obj2= new Circle();
+    IDrawStrategy *obj2 = new Circle();
     grapher.setShape(obj2);
     grapher.drawShape();
 
