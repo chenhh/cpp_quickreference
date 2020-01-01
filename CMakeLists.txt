@@ -6,3 +6,4 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_executable(main1 main1.cpp)
 add_executable(strategy_pattern strategy_pattern.cpp)
+add_executable(boost_version boost_version.cpp)
