@@ -8,4 +8,6 @@ add_executable(main1 main1.cpp)
 add_executable(strategy_pattern strategy_pattern.cpp)
 add_executable(boost_version boost_version.cpp)
 add_executable(boost_datetime boost_datetime.cpp)
-add_executable(omp_version omp_version.cpp)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
+add_executable(omp_hello omp_hello.cpp)
