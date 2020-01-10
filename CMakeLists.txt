@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
 project(cpp_quickreference)
 
+INCLUDE_DIRECTORIES(usr/local/include)
 # cpp11 standard
 set(CMAKE_CXX_STANDARD 14)
 
@@ -26,3 +27,14 @@ if(OPENMP_FOUND)
     add_executable(omp_hello omp_hello.cpp)
 endif()
 
+#find_package(xtensor REQUIRED)
+#target_include_directories(xtensor_hello PUBLIC ${xtensor_INCLUDE_DIRS})
+INCLUDE_DIRECTORIES(usr/local/include)
+#set(CMAKE_REQUIRED_INCLUDES /usr/local/include/xtl  /usr/local/include/xtensor)
+#get_property(dirs DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR} PROPERTY INCLUDE_DIRECTORIES)
+#foreach(dir ${dirs})
+#    message(STATUS "dir='${dir}'")
+#endforeach()
+#LINK_DIRECTORIES(/usr/local/lib)
+add_executable(xtensor_hello xtensor_hello.cpp)
+#target_link_libraries(xtensor_hello PUBLIC xtensor)
