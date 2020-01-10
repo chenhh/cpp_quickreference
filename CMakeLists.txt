@@ -15,7 +15,9 @@ target_link_libraries(fmt_hello fmt::fmt)
 
 find_package(gsl)
 add_executable(gsl_hello gsl_hello.cpp)
-target_link_libraries(gsl_hello gsl)
+# the gslcblas can be replaced to other blas library.
+# e.g. altas, openblas, mkl
+target_link_libraries(gsl_hello gsl gslcblas)
 
 
 FIND_PACKAGE(OpenMP REQUIRED)
