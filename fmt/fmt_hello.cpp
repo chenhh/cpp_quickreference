@@ -1,9 +1,7 @@
-#include <iostream>
-#include <cstdlib>
 #include <string>
 #include <fmt/core.h>
 
-int main(){
+int main() {
     std::string message = fmt::format("The answer is {}\n", 42);
     fmt::print(message);
 
@@ -18,7 +16,7 @@ int main(){
     // fmt::format("The answer is {:d}", "forty-two");
 
     // wide format string
-    fmt::format(L"Cyrillic letter {}", L'\x42e');
+//    fmt::format(L"Cyrillic letter {}", L'\x42e');
 
     fmt::print("Elapsed time: {0:.2f} seconds", 1.23);
 
