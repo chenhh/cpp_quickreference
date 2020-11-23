@@ -2,6 +2,7 @@
 boost/1.74.0
 fmt/7.1.2
 xtensor/0.21.5
+spdlog/1.8.1
 
 [generators]
 cmake
