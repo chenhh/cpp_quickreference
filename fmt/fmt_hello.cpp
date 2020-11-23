@@ -15,9 +15,6 @@ int main() {
     // code ‘d’ for string”
     // fmt::format("The answer is {:d}", "forty-two");
 
-    // wide format string
-//    fmt::format(L"Cyrillic letter {}", L'\x42e');
-
     fmt::print("Elapsed time: {0:.2f} seconds", 1.23);
 
     return 0;
