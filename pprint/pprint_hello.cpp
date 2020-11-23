@@ -3,6 +3,7 @@
 //
 #include <pprint.hpp>
 #include <sstream>
+#include <spdlog/spdlog.h>
 #include <iostream>
 
 void basic_example() {
@@ -69,8 +70,23 @@ void basic_example() {
     printer.print(foo3);
 }
 
+void pprint_with_spdlog() {
+    std::stringstream stream;
+    pprint::PrettyPrinter printer(stream);
+    printer.print(5);
+    printer.print(3.14f);
+    printer.print(2.718);
+    printer.print(true);
+    printer.print('x');
+    printer.print("Hello, world");
+    printer.print(nullptr);
+
+    spdlog::info(stream.str());
+}
+
 int main() {
     basic_example();
+    pprint_with_spdlog();
     return 0;
 }
 
