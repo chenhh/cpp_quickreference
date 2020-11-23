@@ -10,7 +10,8 @@ add_subdirectory(design_pattern)
 add_subdirectory(spdlog)
 add_subdirectory(pprint)
 add_subdirectory(csv-parser)
-
+add_subdirectory(cpp_util)
+add_subdirectory(pcre2)
 # cpp11 standard
 #set(CMAKE_CXX_STANDARD 14)
 

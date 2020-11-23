@@ -4,6 +4,10 @@ fmt/7.1.2
 xtensor/0.21.5
 spdlog/1.8.1
 pprint/0.9.1
+pcre2/10.35
 
 [generators]
 cmake
+
+[options]
+pcre2:support_jit=False
