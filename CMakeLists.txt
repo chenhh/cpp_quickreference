@@ -6,7 +6,7 @@ add_subdirectory(boost)
 add_subdirectory(fmt)
 add_subdirectory(xtensor)
 add_subdirectory(openmp)
-
+add_subdirectory(design_pattern)
 
 # cpp11 standard
 #set(CMAKE_CXX_STANDARD 14)

@@ -4,7 +4,6 @@
 //
 
 #include <iostream>
-#include <cstdlib>
 
 // interface
 class IDrawStrategy {
@@ -14,7 +13,8 @@ public:
 
 class Grapher {
 public:
-    Grapher(IDrawStrategy *drawStrategy = nullptr) : _drawStrategy(drawStrategy) {}
+    Grapher(IDrawStrategy *drawStrategy = nullptr) :
+            _drawStrategy(drawStrategy) {}
 
 public:
     void drawShape() const;
@@ -39,7 +39,7 @@ void Grapher::setShape(IDrawStrategy *drawStrategy) {
 // 繼承自interface，而非Grapher
 class Triangle : public IDrawStrategy {
 public:
-    void draw() const;
+    void draw() const override;
 };
 
 void Triangle::draw() const {
@@ -49,7 +49,7 @@ void Triangle::draw() const {
 // 繼承自interface，而非Grapher
 class Circle : public IDrawStrategy {
 public:
-    void draw() const;
+    void draw() const override;
 };
 
 void Circle::draw() const {
@@ -59,7 +59,7 @@ void Circle::draw() const {
 // 繼承自interface，而非Grapher
 class Square : public IDrawStrategy {
 public:
-    void draw() const;
+    void draw() const override;
 };
 
 void Square::draw() const {
