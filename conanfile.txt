@@ -7,6 +7,7 @@ pprint/0.9.1
 pcre2/10.35
 abseil/20200923.2
 nlohmann_json/3.9.1
+poco/1.10.1
 
 [generators]
 cmake
