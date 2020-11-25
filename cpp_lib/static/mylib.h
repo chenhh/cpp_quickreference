@@ -1,0 +1,8 @@
+#ifndef CPP_QUICKREFERENCE_MYLIB_H
+#define CPP_QUICKREFERENCE_MYLIB_H
+
+void hello();
+
+void world();
+
+#endif //CPP_QUICKREFERENCE_MYLIB_H

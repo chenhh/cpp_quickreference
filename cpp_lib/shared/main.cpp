@@ -1,6 +1,6 @@
 #include "mylib.h"
 
-int main(){
+int main() {
     hello();
     world();
     return 0;
