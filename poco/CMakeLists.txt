@@ -9,5 +9,3 @@ conan_basic_setup()
 add_executable(poco_hello poco_hello.cpp)
 target_link_libraries(poco_hello ${CONAN_LIBS})
 
-add_executable(poco_sharedlib_func TestLibrary.cpp LibraryLoaderTest.cpp)
-target_link_libraries(poco_sharedlib_func ${CONAN_LIBS})
